@@ -1,11 +1,11 @@
 # Configure Spree Preferences
 #
-Spree.config do |config|
-  config.use_s3 = true
-  config.s3_bucket = 'stitchgrab'
-  config.s3_access_key = "AKIAIIH6273GNUSRRWMA"
-  config.s3_secret = "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"
-end
+# Spree.config do |config|
+#   config.use_s3 = true
+#   config.s3_bucket = 'stitchgrab'
+#   config.s3_access_key = "AKIAIIH6273GNUSRRWMA"
+#   config.s3_secret = "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"
+# end
 
 Spree.config do |config|
   config.logo = 'logo.png'
