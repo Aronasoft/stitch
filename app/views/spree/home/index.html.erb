@@ -20,11 +20,11 @@
   <div class="row">
     <div class="col-6">
 
-      <div class="homepage-taxon-box mb-3">
+      <div class="homepage-hero-image flex-grow-1">
         <%= link_to spree.nested_taxons_path('men') do %>
           <img class="w-100 lazyload"
-            data-src="<%= asset_path('homepage/category_banner_upper.jpg') %>"
-            data-srcset="<%= image_source_set('homepage/category_banner_upper') %>"
+            data-src="<%= asset_path('homepage/big_category_banner.jpg') %>"
+            data-srcset="<%= image_source_set('homepage/big_category_banner') %>"
             alt="<%= Spree.t('homepage.men')%>" />
 
           <div class="homepage-taxon-box-text">
@@ -33,24 +33,11 @@
         <% end %>
       </div>
 
-      <div class="homepage-taxon-box">
-        <%= link_to spree.nested_taxons_path('sportswear') do %>
-          <img class="w-100 lazyload"
-            data-src="<%= asset_path('homepage/category_banner_lower.jpg') %>"
-            data-srcset="<%= image_source_set('homepage/category_banner_lower') %>"
-            alt="<%= Spree.t('homepage.sportswear')%>" />
-
-          <div class="homepage-taxon-box-text" role="img" aria-label="<%= Spree.t('homepage.sportswear') %>">
-            <h3><%= Spree.t('homepage.sportswear') %></h3>
-          </div>
-        <% end %>
-      </div>
-
     </div>
 
     <div class="col-6 d-flex flex-column">
 
-      <div class="homepage-taxon-box flex-grow-1">
+      <div class="homepage-hero-image flex-grow-1">
         <%= link_to spree.nested_taxons_path('women') do %>
           <img class="w-100 lazyload"
             data-src="<%= asset_path('homepage/big_category_banner.jpg') %>"

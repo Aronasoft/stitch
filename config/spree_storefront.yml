@@ -4,8 +4,8 @@ default:
       subtitle: Categories
       url: /t/men
       items:
-        - :title: Causal
-          :url: /t/men/causal
+        - :title: Casual
+          :url: /t/men/casual
         - :title: Street
           :url: /t/men/street
         - :title: Active
