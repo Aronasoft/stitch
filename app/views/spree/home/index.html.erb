@@ -11,7 +11,7 @@
     <div class="col-6">
 
       <div class="homepage-hero-image flex-grow-1">
-        <%= link_to spree.nested_taxons_path('men') do %>
+        <%= link_to '/men' do %>
           <img class="w-100 lazyload"
                data-src="<%= asset_path('homepage/big_category_banner.jpg') %>"
                data-srcset="<%= image_source_set('homepage/big_category_banner') %>"
@@ -28,7 +28,7 @@
     <div class="col-6 d-flex flex-column">
 
       <div class="homepage-hero-image flex-grow-1">
-        <%= link_to spree.nested_taxons_path('women') do %>
+        <%= link_to '/women' do %>
           <img class="w-100 lazyload"
                data-src="<%= asset_path('homepage/big_category_banner.jpg') %>"
                data-srcset="<%= image_source_set('homepage/big_category_banner') %>"
