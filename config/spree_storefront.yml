@@ -2,7 +2,7 @@ default:
   navigation:
     - title: Men
       subtitle: Categories
-      url: /t/men
+      url: /men
       items:
         - :title: Casual
           :url: /t/men/casual
@@ -23,7 +23,7 @@ default:
           image: 'meganav/promo_banner_right-second-category.jpg'
     - title: Women
       subtitle: Categories
-      url: /t/women
+      url: /women
       items:
         - :title: Active
           :url: /t/women/active
