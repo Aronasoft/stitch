@@ -41,6 +41,8 @@ default:
           :url: /t/women/kicks
         - :title: Street
           :url: /t/women/street
+        - :title: Curve
+          :url: /t/women/curve
       promo_banners:
         - subtitle: New collection
           title: Summer 2019

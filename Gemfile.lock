@@ -433,7 +433,9 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spree (~> 4.1)
+  spree_api
   spree_auth_devise (~> 4.1)
+  spree_backend
   spree_gateway (~> 3.7)
   spree_multi_vendor!
   spring
