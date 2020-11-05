@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   # If you would like to change where this engine is mounted, simply change the
   # :at option to something different.
   #
-  get '/t/men' => 'spree/home#men', as: 'show_men_home'
-  get '/t/women' => 'spree/home#women', as: 'show_women_home'
   # We ask that you don't use the :as option here, as Spree relies on it being
   # the default of "spree".
   mount Spree::Core::Engine, at: '/'
