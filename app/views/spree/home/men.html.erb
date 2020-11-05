@@ -11,12 +11,9 @@
   <div class="d-flex justify-content-center position-sticky sticky-top-90px taxon-subcategories-wrapper">
     <div class="py-1 text-uppercase d-flex overflow-x taxon-subcategories">
       <a class="pt-4 pb-2 mb-2 " href="/">All</a>
-      <div class="pt-4 mb-2 pl-4">
-            <span class="pb-2 taxon-subcategories-selected">
-              Men
-            </span>
-      </div>
-      <a class="pt-4 pb-2 mb-2 pl-4 pt-4 pb-2" href="/women">Women</a>
+      <% spree_navigation_data[0]['items'].each do |item| %>
+        <a class="pt-4 pb-2 mb-2 pl-4 pt-4 pb-2" href="<%= item[:url] %>"><%= item[:title] %></a>
+      <% end %>
     </div>
   </div>
   <div class="row">
