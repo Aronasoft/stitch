@@ -67,5 +67,6 @@ gem 'spree_backend'
 gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
 gem 'spree_multi_vendor', github: 'spree-contrib/spree_multi_vendor'
+gem 'spree_mail_settings', path: './spree_mail_settings'
 
 gem 'rails_12factor', group: :production

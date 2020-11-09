@@ -8,6 +8,14 @@ GIT
       spree_core (>= 3.7.0, < 5.0)
       spree_extension
 
+PATH
+  remote: spree_mail_settings
+  specs:
+    spree_mail_settings (3.3.0)
+      spree_auth_devise (>= 3.7.0, < 5.0)
+      spree_backend (>= 3.7.0, < 5.0)
+      spree_core (>= 3.7.0, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -148,7 +156,7 @@ GEM
     htmlentities (4.3.4)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
-    image_processing (1.12.0)
+    image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
     inline_svg (1.7.1)
@@ -355,7 +363,7 @@ GEM
       spree_api (= 4.1.11)
       spree_core (= 4.1.11)
       turbolinks (~> 5.2.0)
-    spree_gateway (3.9.1)
+    spree_gateway (3.9.2)
       deface
       spree_core (>= 3.7.0, < 5.0)
       spree_extension
@@ -391,7 +399,7 @@ GEM
       camertron-eprun
       cldr-plurals-runtime-rb (~> 1.0)
       tzinfo
-    tzinfo (1.2.7)
+    tzinfo (1.2.8)
       thread_safe (~> 0.1)
     warden (1.2.9)
       rack (>= 2.0.9)
@@ -438,6 +446,7 @@ DEPENDENCIES
   spree_auth_devise (~> 4.1)
   spree_backend
   spree_gateway (~> 3.7)
+  spree_mail_settings!
   spree_multi_vendor!
   spring
   spring-watcher-listen (~> 2.0.0)
