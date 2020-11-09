@@ -3,7 +3,7 @@ module Spree
     def self.prepended(base)
       # Default mail headers settings
       base.preference :mails_from, :string, default: 'spree@example.com'
-      base.preference :enable_mail_delivery, :boolean, default: false
+      base.preference :enable_mail_delivery, :boolean, default: true
       base.preference :mail_bcc, :string, default: 'spree@example.com'
       base.preference :intercept_email, :string, default: nil
 
