@@ -27,8 +27,6 @@ default:
       items:
         - :title: Active
           :url: /t/women/active
-        - :title: Artsy
-          :url: /t/women/artsy
         - :title: Chic
           :url: /t/women/chic
         - :title: Bohemian
@@ -43,6 +41,12 @@ default:
           :url: /t/women/street
         - :title: Curve
           :url: /t/women/curve
+        - :title: Vintage
+          :url: /t/women/vintage
+        - :title: Lingerie
+          :url: /t/women/lingerie
+        - :title: Sexy Casual
+          :url: /t/women/sexy-casual
       promo_banners:
         - subtitle: New collection
           title: Summer 2019
