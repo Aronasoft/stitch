@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_04_194317) do
+ActiveRecord::Schema.define(version: 2020_12_23_224446) do
 
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
@@ -462,6 +462,7 @@ ActiveRecord::Schema.define(version: 2020_10_04_194317) do
     t.string "number"
     t.string "cvv_response_code"
     t.string "cvv_response_message"
+    t.string "intent_client_key"
     t.index ["number"], name: "index_spree_payments_on_number", unique: true
     t.index ["order_id"], name: "index_spree_payments_on_order_id"
     t.index ["payment_method_id"], name: "index_spree_payments_on_payment_method_id"
@@ -713,6 +714,26 @@ ActiveRecord::Schema.define(version: 2020_10_04_194317) do
     t.index ["customer_return_id"], name: "index_spree_reimbursements_on_customer_return_id"
     t.index ["number"], name: "index_spree_reimbursements_on_number", unique: true
     t.index ["order_id"], name: "index_spree_reimbursements_on_order_id"
+  end
+
+  create_table "spree_relation_types", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "applies_to"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spree_relations", force: :cascade do |t|
+    t.integer "relation_type_id"
+    t.string "relatable_type"
+    t.integer "relatable_id"
+    t.string "related_to_type"
+    t.integer "related_to_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal "discount_amount", precision: 8, scale: 2, default: "0.0"
+    t.integer "position"
   end
 
   create_table "spree_return_authorization_reasons", force: :cascade do |t|

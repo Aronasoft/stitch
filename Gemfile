@@ -68,3 +68,4 @@ gem 'spree_multi_vendor', github: 'spree-contrib/spree_multi_vendor'
 gem 'spree_mail_settings', path: './spree_mail_settings'
 
 gem 'rails_12factor', group: :production
+gem 'spree_related_products', github: 'spree-contrib/spree_related_products'

@@ -12,3 +12,7 @@ Rails.application.routes.draw do
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+
+Spree::Core::Engine.add_routes do
+  get '/products/:id/vendor', to: 'products#vendor'
+end
