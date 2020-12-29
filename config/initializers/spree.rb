@@ -43,3 +43,6 @@ end
 # Spree::Api::Dependencies.storefront_cart_serializer = 'MyRailsApp::CartSerializer'
 
 Spree.user_class = "Spree::User"
+
+config = Rails.application.config
+config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::MyOwnCalculator
