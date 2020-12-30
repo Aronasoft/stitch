@@ -40,7 +40,7 @@ default:
           :image: 'women/women_bohemian'
         - :title: Casual
           :url: /t/women/casual
-          :image: 'women/women_sexy_causal'
+          :image: 'women/women_causal'
         - :title: Sexy
           :url: /t/women/sexy
           :image: 'women/women_sexy'
