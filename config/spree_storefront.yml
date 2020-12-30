@@ -44,9 +44,9 @@ default:
         - :title: Sexy
           :url: /t/women/sexy
           :image: 'women/women_sexy'
-        - :title: Kicks
-          :url: /t/women/kicks
-          :image: 'women/women_kicks'
+        - :title: Shoes
+          :url: /t/women/shoes
+          :image: 'women/women_shoes'
         - :title: Street
           :url: /t/women/street
           :image: 'women/women_street'
