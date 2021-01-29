@@ -23,18 +23,18 @@ module Spree
 
         if params[:q][:created_at_gt].present?
           params[:q][:created_at_gt] = begin
-                                         Time.zone.parse(params[:q][:created_at_gt]).beginning_of_day
-                                       rescue StandardError
-                                         ''
-                                       end
+            Time.zone.parse(params[:q][:created_at_gt]).beginning_of_day
+          rescue StandardError
+            ''
+          end
         end
 
         if params[:q][:created_at_lt].present?
           params[:q][:created_at_lt] = begin
-                                         Time.zone.parse(params[:q][:created_at_lt]).end_of_day
-                                       rescue StandardError
-                                         ''
-                                       end
+            Time.zone.parse(params[:q][:created_at_lt]).end_of_day
+          rescue StandardError
+            ''
+          end
         end
 
         if @show_only_completed
@@ -48,8 +48,8 @@ module Spree
         # e.g. SELECT  DISTINCT DISTINCT "spree_orders".id, "spree_orders"."created_at" AS alias_0 FROM "spree_orders"
         # see https://github.com/spree/spree/pull/3919
         @orders = @search.result(distinct: true).
-                  page(params[:page]).
-                  per(params[:per_page] || Spree::Config[:admin_orders_per_page])
+            page(params[:page]).
+            per(params[:per_page] || Spree::Config[:admin_orders_per_page])
 
         # Restore dates
         params[:q][:created_at_gt] = created_at_gt
@@ -107,6 +107,61 @@ module Spree
 
       def approve
         @order.approved_by(try_spree_current_user)
+
+        vendor_lineitems = {}
+        @order.line_items.each do |line_item|
+          unless vendor_lineitems[line_item.variant.product.vendor.id]
+            vendor_lineitems[line_item.variant.product.vendor.id] = []
+          end
+          vendor_lineitems[line_item.variant.product.vendor.id].push(line_item)
+        end
+
+        contact_description = "Please call customer service if you have any problem.\nPhone Number: (305)915-1557"
+        vendor_lineitems.keys.each do |vendor_key|
+          vendor = Spree::VendorUser.find_by(vendor_id: vendor_key)
+          lineitems = vendor_lineitems[vendor_key]
+          vendor_address = vendor.user.addresses[0]
+          product_description = ""
+          lineitems.each do |lineitem|
+            product_description += "----------------\n"
+            product_description += "Product Name: " + lineitem.variant.product.name + "\n"
+            product_description += "Quantity: " + lineitem.quantity.to_s + "\n"
+            product_description += lineitem.options_text + "\n"
+            product_description += "----------------\n"
+            product_description += "\n"
+          end
+          pickup_task = Onfleet::Task.create(
+              destination: {
+                  address: {
+                      unparsed: vendor_address.address1
+                  }
+              },
+              recipients:
+                  [{
+                       name: vendor_address.firstname + " " + vendor_address.lastname,
+                       phone: vendor_address.phone,
+                   }],
+              pickup_task: true,
+              notes: "Pickup these products from recipients\n" + product_description + "\n" + contact_description
+          )
+          customer_address = @order.bill_address
+
+          dropoff_task = Onfleet::Task.create(
+              destination: {
+                  address: {
+                      unparsed: customer_address.address1
+                  }
+              },
+              recipients:
+                  [{
+                       name: customer_address.firstname + " " + customer_address.lastname,
+                       phone: customer_address.phone
+                   }],
+              pickup_task: false,
+              dependencies: [pickup_task.id],
+              notes: "Drop off these products\n" + product_description + "\n" + contact_description
+          )
+        end
         flash[:success] = Spree.t(:order_approved)
         redirect_back fallback_location: spree.edit_admin_order_url(@order)
       end

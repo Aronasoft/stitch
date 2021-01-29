@@ -46,3 +46,5 @@ Spree.user_class = "Spree::User"
 
 config = Rails.application.config
 config.spree.calculators.shipping_methods << Spree::Calculator::Shipping::MyOwnCalculator
+
+Onfleet.api_key = "457a2daf8ab409f050f8f698ee0be636"
