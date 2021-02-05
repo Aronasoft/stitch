@@ -16,15 +16,6 @@ default:
         - :title: Kicks
           :url: /t/men/kicks
           :image: 'men/men_kicks'
-      promo_banners:
-        - subtitle: New collection
-          title: Summer 2019
-          url: /t/new-collection/summer-2019
-          image: 'meganav/promo_banner_left-second-category.jpg'
-        - subtitle: Special Offers
-          title: Get up to 30% off
-          url: /t/special-offers/30-off
-          image: 'meganav/promo_banner_right-second-category.jpg'
     - title: Women
       subtitle: Categories
       url: /women
@@ -62,12 +53,3 @@ default:
         - :title: Sexy Casual
           :url: /t/women/sexy-casual
           :image: 'women/women_sexy_causal'
-      promo_banners:
-        - subtitle: New collection
-          title: Summer 2019
-          url: /t/new-collection/summer-2019
-          image: 'meganav/promo_banner_left-first-category.jpg'
-        - subtitle: Special Offers
-          title: Get up to 30% off
-          url: /t/special-offers/30-off
-          image: 'meganav/promo_banner_right-first-category.jpg'
