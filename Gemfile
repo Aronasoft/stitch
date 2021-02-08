@@ -70,3 +70,4 @@ gem 'spree_mail_settings', path: './spree_mail_settings'
 gem 'rails_12factor', group: :production
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'onfleet-ruby'
+gem 'mixpanel-ruby'
