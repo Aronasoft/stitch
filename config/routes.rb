@@ -15,4 +15,7 @@ end
 
 Spree::Core::Engine.add_routes do
   get '/products/:id/vendor', to: 'products#vendor'
+  get '/terms', to: 'terms#index'
+  get '/privacy_policy', to: 'terms#policy'
+  get '/refund_policy', to: 'terms#refund'
 end
