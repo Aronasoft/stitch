@@ -68,7 +68,31 @@
           </ul>
         </li>
       <% end %>
-      <li style="margin-top: auto;" class="d-flex justify-content-between align-items-center mobile-navigation-list-item"><%= link_to 'Terms', '/terms', target: '_blank' %></li>
+      <li style="margin-top: auto;" class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+        Contact Us
+        <a class="w-25 text-right mobile-navigation-category-link" href="#" data-category="contact_us">
+          <%= icon(name: 'arrow-right',
+                   classes: 'd-sm-none spree-icon-arrow spree-icon-arrow-right',
+                   width: 16,
+                   height: 16) %>
+          <%= icon(name: 'arrow-right',
+                   classes: 'd-none d-sm-inline spree-icon-arrow spree-icon-arrow-right',
+                   width: 14,
+                   height: 27) %>
+        </a>
+        <ul class="list-unstyled position-absolute mobile-navigation-sublist" data-category="contact_us">
+          <li class="text-center font-weight-bold mobile-navigation-sublist-header">
+            Contact Us
+          </li>
+          <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+            Phone: 3059151557
+          </li>
+          <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item">
+            Email: info@stitchgrab.com
+          </li>
+        </ul>
+      </li>
+      <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item"><%= link_to 'Terms', '/terms', target: '_blank' %></li>
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item"><%= link_to 'Privacy Policy', '/privacy_policy', target: '_blank' %></li>
       <li class="d-flex justify-content-between align-items-center mobile-navigation-list-item"><%= link_to 'Refund Policy', '/refund_policy', target: '_blank' %></li>
     </ul>
