@@ -71,3 +71,6 @@ gem 'rails_12factor', group: :production
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'onfleet-ruby'
 gem 'mixpanel-ruby'
+
+gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us'
+gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
