@@ -71,3 +71,4 @@ gem 'rails_12factor', group: :production
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'onfleet-ruby'
 gem 'mixpanel-ruby'
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
