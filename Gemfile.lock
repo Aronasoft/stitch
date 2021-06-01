@@ -6,6 +6,14 @@ GIT
     mimemagic (0.3.5)
 
 GIT
+  remote: https://github.com/spree-contrib/spree_contact_us.git
+  revision: d4164e119f58f887644bedf0dead69c5f40ce431
+  specs:
+    spree_contact_us (4.0.0.alpha2)
+      deface (~> 1.0)
+      spree_core (>= 3.7.0)
+
+GIT
   remote: https://github.com/spree-contrib/spree_multi_vendor.git
   revision: 71dab3cc125867cc7372affa6f5cfb97136d0103
   specs:
@@ -23,6 +31,15 @@ GIT
       deface (~> 1.0)
       spree_backend (>= 3.1.0, < 5.0)
       spree_core (>= 3.1.0, < 5.0)
+      spree_extension
+
+GIT
+  remote: https://github.com/spree-contrib/spree_static_content.git
+  revision: 57953abd2d2151aa94d2db16e040243a48496436
+  specs:
+    spree_static_content (4.2.0)
+      deface (~> 1.5)
+      spree_core (>= 3.7.0, < 5.0)
       spree_extension
 
 PATH
@@ -482,10 +499,12 @@ DEPENDENCIES
   spree_api
   spree_auth_devise (~> 4.1)
   spree_backend
+  spree_contact_us!
   spree_gateway (~> 3.7)
   spree_mail_settings!
   spree_multi_vendor!
   spree_related_products!
+  spree_static_content!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3 (~> 1.4)
