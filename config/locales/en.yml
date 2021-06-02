@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  spree:
+    spree_contact_us:
+      header: Contact us
