@@ -74,3 +74,5 @@ gem 'mixpanel-ruby'
 gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f'
 gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
+gem 'ckeditor'
+gem "mini_magick"
