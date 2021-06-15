@@ -1,28 +1,25 @@
 <%# leaving #spree-header div for legacy support  %>
 <% cache spree_nav_cache_key('header') do %>
   <div id="spree-header" data-turbolinks-permanent>
+    <header id="header" class="d-flex align-items-center header-spree border-bottom">
     <div class="sm-header">
-      <div class="container-fluid header-spree-fluid sm-header__wrapper">
-        <div class="sm-header__country-block">
-          <div class="country-flag">
+    <div class="container-fluid header-spree-fluid sm-header__wrapper">
+      <div class="sm-header__country-block">
+        <div class="country-flag">
           <%= image_tag "currency/usd.png", class: "currency-img-width"  %>
-          </div>
         </div>
-    <div class="sm-header__currency">
-        <li id="currency-select" data-hook="">
-           <form class="navbar-form" action="/currency/set.html" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="S2XTdTloV8DN9HzPCCGM6ZEbF+JIc+96948Zc969L9uoHtYI1MlUDqqVmzJl3OfaqsNbkJkojVhYFqI0ocDOMg==">
-            <div class="form-group">
-              <label for="currency" class="sr-only">Currency</label>
-          <select name="currency" id="currency" class="form-control" data-href="/currency/set">
-            <option selected="selected" value="USD">USD</option>
-           </select>
       </div>
-            </form>
+      <div class="sm-header__currency">
+        <li id="currency-select" >
+          <div class="form-group">
+            <select name="currency" id="currency" class="form-control" >
+              <option selected="selected" value="USD">USD</option>
+             </select>
+          </div>
         </li>
+      </div>
     </div>
   </div>
-
-    <header id="header" class="d-flex align-items-center header-spree border-bottom">
       <div class="container-fluid h-100 header-spree-fluid">
         <div class="d-flex flex-nowrap align-items-center h-100">
           <div class="d-xl-none flex-grow-1 header-spree-fluid-mobile-menu-toggler">
