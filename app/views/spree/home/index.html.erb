@@ -1,14 +1,8 @@
 <% @body_id = 'home' %>
-
-<div class="homepage-hero-image mb-3 position-relative main-margin">
-  <img class="lazyload hero-image position-absolute"
-       data-srcset="<%= image_source_set('homepage/main_banner') %>"/>
-</div>
-
+<%= render partial: 'spree/shared/slider', locals: { slider: Spree::Slide.published, cid: 'home', interval: 2000 } %>
 <div class="container">
   <div class="row">
     <div class="col-6">
-
       <div class="homepage-hero-image flex-grow-1">
         <%= link_to '/men' do %>
           <img class="w-100 lazyload"
