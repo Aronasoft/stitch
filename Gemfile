@@ -7,7 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-  gem 'sqlite3', '~> 1.4'
+  gem 'pg'
 end
 gem 'pg'
 # Use Puma as the app server
@@ -17,7 +17,7 @@ gem 'aws-s3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 6.0.0.beta.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -67,7 +67,7 @@ gem 'spree_auth_devise', '~> 4.1'
 gem 'spree_gateway', '~> 3.7'
 gem 'spree_multi_vendor', github: 'spree-contrib/spree_multi_vendor'
 gem 'spree_mail_settings', path: './spree_mail_settings'
-
+gem 'spree_slider', github: 'spree-contrib/spree_slider'
 gem 'rails_12factor', group: :production
 gem 'spree_related_products', github: 'spree-contrib/spree_related_products'
 gem 'onfleet-ruby'
@@ -77,3 +77,4 @@ gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us'
 gem 'spree_static_content', github: 'spree-contrib/spree_static_content'
 gem 'ckeditor'
 gem "mini_magick"
+gem "autoprefixer-rails"
